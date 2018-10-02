@@ -9,3 +9,7 @@ def fizz_buzz():
             Fizz_Buzz_List.append('Fizz')
 		elif index % 5 == 0:
             Fizz_Buzz_List.append('Buzz')
+		else:
+            Fizz_Buzz_List.append(index)
+			
+	return Fizz_Buzz_List
