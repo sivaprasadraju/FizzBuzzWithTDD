@@ -25,3 +25,9 @@ class FizzBuzzTests(unittest.TestCase):
         for index in range(len(response)/15):
             self.assertEquals(response[FizzBuzzCount-1], 'FizzBuzz')
             FizzBuzzCount = FizzBuzzCount + 15
+			
+	def testReturnsTheValue(self):
+        response = fizz_buzz()
+        for index in range(len(response)):
+            if index % 3 != 0 and index % 5 != 0 and index % 15 != 0:
+                self.assertEquals(response[index-1], index)
