@@ -10,3 +10,11 @@ class FizzBuzzTests(unittest.TestCase):
             if FizzCount % 15 != 0:
                 self.assertEquals(response[FizzCount-1], 'Fizz')
                 FizzCount = FizzCount + 3
+	
+	def testReturnsTheValueOfEachMultipleOfFive(self):
+        response = fizz_buzz()
+        BuzzCount = 5
+        for index in range(len(response)):
+            if BuzzCount % 15 != 0:
+                self.assertEquals(response[BuzzCount-1], 'Buzz')
+                BuzzCount = BuzzCount + 5
